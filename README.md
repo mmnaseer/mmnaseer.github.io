@@ -1,13 +1,12 @@
-# Website (Sorace-style layout)
+# Minimal single-page academic site (Sorace-like)
 
-This is a clean single-page academic website template (original code), designed for GitHub Pages.
+This is an original, minimal single-page template with a simple list navigation and clean typography,
+designed for GitHub Pages.
 
-## How to publish
-1. Upload the contents of this folder into your `mmnaseer.github.io` repository root.
-2. Ensure GitHub Pages is set to deploy from `main` and `/(root)`.
-3. Visit: https://mmnaseer.github.io
+## Publish
+Upload all files to the root of your `mmnaseer.github.io` repository and ensure Pages deploys from `main` and `/(root)`.
 
-## What to edit
+## Edit
 - `index.html`: your content and links
-- `files/CV.pdf`: replace with your CV (keep filename)
-- `assets/style.css`: colors/typography/layout
+- `FILES/CV.pdf`: replace with your CV (keep name)
+- `assets/style.css`: colors/typography
