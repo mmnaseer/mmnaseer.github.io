@@ -1,17 +1,13 @@
-# Academic Website (single-page)
+# Website (Sorace-style layout)
 
-This is a lightweight, responsive academic website scaffold with a sidebar menu and anchored sections.
+This is a clean single-page academic website template (original code), designed for GitHub Pages.
 
-## Quick start (local)
-Open `index.html` in a browser.
+## How to publish
+1. Upload the contents of this folder into your `mmnaseer.github.io` repository root.
+2. Ensure GitHub Pages is set to deploy from `main` and `/(root)`.
+3. Visit: https://mmnaseer.github.io
 
-## Deploy on GitHub Pages
-1. Create a repo named **<your-username>.github.io**
-2. Upload these files to the repo root.
-3. GitHub → Settings → Pages → Deploy from **main** branch / **root**
-4. Your site will appear at https://<your-username>.github.io
-
-## Customise
-- Edit `index.html` (text + links)
-- Replace `files/CV.pdf` with your own CV PDF
-- Update colours/typography in `assets/style.css`
+## What to edit
+- `index.html`: your content and links
+- `files/CV.pdf`: replace with your CV (keep filename)
+- `assets/style.css`: colors/typography/layout
