@@ -14,4 +14,4 @@ Add projects.
 Add publications.
 
 ## Contact
-Email: yourname@email.com
+Email: mirzamnaseer@gmail.com
