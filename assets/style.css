@@ -97,12 +97,27 @@ a:hover { text-decoration: underline; color: var(--brand); }
 }
 
 .profile-img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-  border-radius: 20px;
-  border: 2px solid var(--line);
-  box-shadow: var(--shadow);
+    width: 160px;          /* Increased size slightly to fill the space */
+    height: 160px;         /* Match width for a perfect square */
+    object-fit: cover;     /* Important: crops the photo to fit the square without stretching */
+    object-position: top;  /* Ensures the crop focuses on your face */
+    border-radius: 18px;   /* Matches the --radius of your cards */
+    border: 1px solid var(--line);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    display: block;
+}
+
+/* On smaller screens, keep the photo centered */
+@media (max-width: 850px) {
+    .quick-links-card {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .profile-img {
+        margin-bottom: 20px;
+        width: 140px;
+        height: 140px;
+    }
 }
 
 /* --- Sections & Cards --- */
