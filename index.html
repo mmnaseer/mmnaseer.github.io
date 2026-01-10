@@ -14,11 +14,11 @@
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 
-<body>
-  <header class="topbar">
+<body class="dark-theme"> <header class="topbar">
     <div class="container topbar-inner">
       <a class="brand" href="#top">Mirza Muhammad Naseer</a>
-      <div class="nav-wrapper">
+      
+      <div class="nav-container">
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">🌓</button>
         <nav class="nav">
           <a href="#about">About</a>
@@ -27,6 +27,7 @@
           <a href="#teaching">Teaching</a>
           <a href="#contact">Contact</a>
         </nav>
+        <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
       </div>
     </div>
   </header>
@@ -50,7 +51,7 @@
         </div>
 
         <aside class="card quick-links-card">
-          <div class="card-content">
+          <div class="card-links">
             <h2 class="card-title">Quick links</h2>
             <ul class="link-list">
               <li><a href="https://scholar.google.com/citations?user=SM0wvw0AAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar"></i> Google Scholar</a></li>
@@ -59,8 +60,8 @@
               <li><a href="https://www.linkedin.com/in/mirzamnaseer/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
             </ul>
           </div>
-          <div class="photo-box">
-            <img src="assets/photo.jpg" alt="Profile" class="profile-img">
+          <div class="photo-wrapper">
+            <img src="assets/photo.jpg" alt="Profile Photo" class="profile-img">
           </div>
         </aside>
       </div>
@@ -69,7 +70,7 @@
     <section id="about" class="section">
       <div class="container">
         <h2>About</h2>
-        <p>I am a dedicated PhD researcher at Teesside University International Business School, specializing in climate change, corporate social responsibility, and green finance.</p>
+        <p>I am a dedicated PhD researcher specializing in climate change, CSR, and green finance. My research explores how climate risks affect firm value and market volatility.</p>
         <div class="grid-2">
           <div class="card">
             <h3><i class="fas fa-search"></i> Research interests</h3>
@@ -82,7 +83,7 @@
             <h3><i class="fas fa-flask"></i> Methods</h3>
             <ul class="bullets">
               <li>Panel econometrics</li>
-              <li>Textual analysis</li>
+              <li>Textual analysis of earnings calls</li>
             </ul>
           </div>
         </div>
@@ -131,7 +132,7 @@
     <section id="contact" class="section alt">
       <div class="container">
         <h2>Contact</h2>
-        <div class="card contact-info">
+        <div class="card contact-box">
           <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mirzamnaseer@gmail.com">mirzamnaseer@gmail.com</a></p>
           <p><i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="#">mmnaseer</a></p>
         </div>
