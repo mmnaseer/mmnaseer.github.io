@@ -1,0 +1,44 @@
+---
+layout: page
+title: Projects
+weight: 2
+permalink: /projects/
+show: 1
+---
+<h3>Projects</h3>
+
+
+<p>
+  These are some of the open-source projects I work on outside of
+  research. Some of the topics I am interested in are : programming
+  languages for machine learning, tools for learning and teaching data
+  science, NLP visualization and data exploration, and efficient
+  code for non-matrix based algorithms. 
+  
+
+</p>
+
+<table>
+{% for project in site.data.projects.projects %}
+  <tr><td style="padding:10px;width:200px;">
+{% if project.image %}<a class="paper" href="{{project.link}}"><img width="200px" src="{{project.image}}"> </a>{% endif %}
+</td><td style="padding:10px">
+<a class="paper" href="{{project.link}}">
+{{project.title}}
+</a><br>
+{{project.abstract}}<br>
+{% if project.link %}<a class="icon pdf label label-info" href="{{project.link}}">github</a> {% endif %}
+{% if project.data %}<a class="icon pdf label label-success" href="{{project.data}}">data</a> {% endif %}
+{% if project.pdf %}<a class="icon pdf label label-info" href="{{project.pdf}}">pdf</a> {% endif %}
+{% if project.models %}<a class="icon slides label label-warning" href="{{project.models}}">models</a>{% endif %}
+{% if project.code %} <a class="icon slides label label-success label-warning" href="{{project.code}}">code</a>{% endif %}
+
+
+<br>
+
+</td></tr>
+
+{% endfor %}
+</table>
+
+
