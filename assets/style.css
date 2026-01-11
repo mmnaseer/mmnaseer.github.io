@@ -182,6 +182,17 @@ h2 { color: var(--brand); font-size: 1.8rem; margin-top: 0; margin-bottom: 25px;
   color: var(--muted); 
   font-size: 0.9rem; 
 }
+.pub-links a {
+    color: #ff7eb9; /* Replace with your preferred Hex color */
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pub-links a:hover {
+    color: var(--text); /* Changes color when you hover */
+    text-decoration: underline;
+}
+
 
 /* --- 7. Responsive Design --- */
 @media (max-width: 900px) {
