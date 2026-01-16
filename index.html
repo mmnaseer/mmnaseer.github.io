@@ -151,3 +151,132 @@
           <article class="pub-card">
             <div class="pub-content">
               <div class="pub-tags"><span class="tag">Global</span><span class="tag">Volatility</span></div>
+              <h3 class="pub-title">The dynamics of corporate climate risk and market volatility: A global analysis</h3>
+              <p class="pub-journal">North American Journal of Economics and Finance, 2025</p>
+              <div class="pub-actions">
+                <a href="papers/NAJEF.pdf" class="btn-sm"><i class="fas fa-file-pdf"></i> PDF</a>
+                <a href="https://doi.org/10.1016/j.najef.2025.102435" class="btn-sm outline">DOI</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pub-card">
+            <div class="pub-content">
+              <div class="pub-tags"><span class="tag">ESG</span><span class="tag">Investments</span></div>
+              <h3 class="pub-title">Sustainable investments in volatile times: Nexus of climate change risk and ESG practices</h3>
+              <p class="pub-journal">International Review of Financial Analysis, 2024</p>
+              <div class="pub-actions">
+                <a href="papers/IRFA.pdf" class="btn-sm"><i class="fas fa-file-pdf"></i> PDF</a>
+                <a href="https://doi.org/10.1016/j.irfa.2024.103492" class="btn-sm outline">DOI</a>
+              </div>
+            </div>
+          </article>
+
+           <article class="pub-card">
+            <div class="pub-content">
+              <div class="pub-tags"><span class="tag">Bank Stability</span><span class="tag">Institutions</span></div>
+              <h3 class="pub-title">ESG Performance and Bank stability: The Role of National Culture and Formal Institutions</h3>
+              <p class="pub-journal">Research in International Business and Finance, 2026</p>
+              <div class="pub-actions">
+                <a href="papers/RIBAF2.pdf" class="btn-sm"><i class="fas fa-file-pdf"></i> PDF</a>
+                <a href="https://doi.org/10.1016/j.ribaf.2025.103214" class="btn-sm outline">DOI</a>
+              </div>
+            </div>
+          </article>
+
+           <article class="pub-card">
+            <div class="pub-content">
+              <div class="pub-tags"><span class="tag">UK Firms</span><span class="tag">Cost/Benefit</span></div>
+              <h3 class="pub-title">Short-term costs and long-term gains of ESG initiatives in high-risk environments</h3>
+              <p class="pub-journal">Development and Sustainability in Economics and Finance, 2025</p>
+              <div class="pub-actions">
+                <a href="papers/DSEF.pdf" class="btn-sm"><i class="fas fa-file-pdf"></i> PDF</a>
+                <a href="https://doi.org/10.1016/j.dsef.2025.100075" class="btn-sm outline">DOI</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="timeline">
+          
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2022 - Current</div>
+            <div class="timeline-content">
+              <h3>Finance Officer</h3>
+              <span class="company">Citizens Advice Darlington</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2021 - 2022</div>
+            <div class="timeline-content">
+              <h3>Assistant Manager Finance</h3>
+              <span class="company">Mirpur Medical Services Pvt Ltd.</span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-date">2018 - 2018</div>
+            <div class="timeline-content">
+              <h3>Accounts Officer</h3>
+              <span class="company">Daelim Industrial Co. Ltd.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section alt">
+      <div class="container">
+        <h2>Education</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>PhD Business Studies</h3>
+            <p>2022-2026</p>
+          </div>
+          <div class="card">
+             <h3>MS & B.Com Hons</h3>
+            <p>MS Mgt. Sciences (2015-2017)<br>B.Com Hons (2010-2015)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="card contact-box">
+          <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mirzamnaseer@gmail.com">mirzamnaseer@gmail.com</a></p>
+          <p><i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="#">mmnaseer</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© <span id="year"></span> Mirza Muhammad Naseer</p>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+    });
+    if (localStorage.getItem('theme') === 'light') document.body.classList.add('light-theme');
+  </script>
+</body>
+</html>
