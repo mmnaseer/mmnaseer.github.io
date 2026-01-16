@@ -12,26 +12,22 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="assets/style.css" />
-<header class="topbar">
-  <div class="container topbar-inner">
-    <a class="brand" href="#top">Mirza Muhammad Naseer</a>
-
-    <div class="header-right">
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">🌓</button>
-      
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#research">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <button class="menu-btn" type="button" aria-label="Open menu">Menu</button>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top">Mirza Muhammad Naseer</a>
+      <div class="header-right">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">🌓</button>
+        <nav class="nav">
+          <a href="#about">About</a>
+          <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <main id="top">
     <section class="hero">
@@ -62,34 +58,61 @@
             </ul>
           </div>
           <div class="photo-wrapper">
-            <img src="assets/photo.jpg" alt="Profile Photo" class="profile-img">
+            <img src="assets/photo.jpg" alt="Mirza Muhammad Naseer" class="profile-img">
           </div>
         </aside>
+      </div>
+    </section>
+
+    <section class="stats-bar">
+      <div class="container stats-grid">
+        <div class="stat-item">
+          <i class="fas fa-file-lines stat-icon"></i>
+          <div class="stat-text">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Publications</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-graduation-cap stat-icon"></i>
+          <div class="stat-text">
+            <span class="stat-number">PhD</span>
+            <span class="stat-label">Candidate (2026)</span>
+          </div>
+        </div>
+        <div class="stat-item">
+          <i class="fas fa-globe-asia stat-icon"></i>
+          <div class="stat-text">
+            <span class="stat-number">Global</span>
+            <span class="stat-label">Focus (UK, Asia, EU)</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="about" class="section">
       <div class="container">
         <h2>About</h2>
-        <p>I am an applied researcher working at the intersection of finance, economics, and sustainability. 
-          My work examines how climate risk, environmental regulation, and institutional quality affect corporate behaviour, financial markets, and firm performance. 
-          I specialise in large-scale panel data analysis and causal inference, with a strong interest in policy-relevant research..</p>
+        <p class="about-text">I am an applied researcher working at the intersection of finance, economics, and sustainability. My work examines how climate risk, environmental regulation, and institutional quality affect corporate behaviour. I specialise in large-scale panel data analysis and causal inference.</p>
+        
         <div class="grid-2">
           <div class="card">
-            <h3><i class="fas fa-search"></i> Research interests</h3>
-            <ul class="bullets">
-              <li>Climate and transition risk</li>
-              <li>Corporate Finance</li>
-              <li>ESG and Sustainability</li>
-              <li>Corporate Governance</li>
-              <li>Applied Econometrics</li>
-            </ul>
+            <h3><i class="fas fa-search"></i> Research Focus</h3>
+            <div class="topic-cloud">
+              <span class="topic-tag large"><i class="fas fa-leaf"></i> Climate Finance</span>
+              <span class="topic-tag"><i class="fas fa-balance-scale"></i> ESG & Sustainability</span>
+              <span class="topic-tag medium"><i class="fas fa-chart-line"></i> Market Volatility</span>
+              <span class="topic-tag"><i class="fas fa-building"></i> Corporate Governance</span>
+              <span class="topic-tag medium"><i class="fas fa-calculator"></i> Applied Econometrics</span>
+              <span class="topic-tag"><i class="fas fa-industry"></i> Transition Risk</span>
+            </div>
           </div>
           <div class="card">
-            <h3><i class="fas fa-flask"></i> Methods</h3>
+            <h3><i class="fas fa-flask"></i> Methodology</h3>
             <ul class="bullets">
-              <li>Panel econometrics</li>
+              <li>Large-scale Panel Econometrics</li>
               <li>Textual analysis of earnings calls</li>
+              <li>Causal Inference</li>
             </ul>
           </div>
         </div>
@@ -98,162 +121,33 @@
 
     <section id="publications" class="section alt">
       <div class="container">
-        <h2>Publications</h2>
-        <div class="card">
-          <ol class="pubs">
-            <li>
-              <strong>The ESG emissions paradox: Capability-contingent effects of research and development and cost leadership in Asia</strong> <em>Business Strategy and the Environment</em>, 2026.
-              <span class="pub-links"><a href="papers/bse.pdf">PDF</a> · <a href="https://doi.org/10.1002/bse.70362">DOI</a></span>
-            </li>
-            <li>
-              <strong>When climate risk hits corporate value: The moderating role of financial constraints, flexibility, and innovation.</strong> <em>Finance Research Letters</em>, 2025.
-              <span class="pub-links"><a href="papers/FRL.pdf">PDF</a> · <a href="https://doi.org/10.1016/j.frl.2025.106780">DOI</a></span>
-            </li>
-            <li>
-              <strong>The dynamics of corporate climate risk and market volatility: A global analysis.</strong> <em>North American Journal of Economics and Finance</em>, 2025.
-              <span class="pub-links"><a href="papers/NAJEF.pdf">PDF</a> · <a href="https://doi.org/10.1016/j.najef.2025.102435">DOI</a></span>
-            </li>
-            <li>
-              <strong>Sustainable investments in volatile times: Nexus of climate change risk, ESG practices, and market volatility.</strong> <em>International Review of Financial Analysis</em>, 2024.
-              <span class="pub-links"><a href="papers/IRFA.pdf">PDF</a> · <a href="https://doi.org/10.1016/j.irfa.2024.103492">DOI</a></span>
-            </li>
-            <li>
-              <strong>Sustainable development goals and environmental performance: Exploring the contribution of governance, energy, and growth.</strong> <em>Research in International Business and Finance</em>, 2025.
-              <span class="pub-links"><a href="papers/RIBAF.pdf">PDF</a> · <a href="https://doi.org/10.1016/j.ribaf.2024.102646">DOI</a></span>
-            </li>
-            <li>
-              <strong>Firm climate change risk and financial flexibility: Drivers of ESG performance and firm value.</strong> <em>Borsa Istanbul Review</em>, 2024.
-              <span class="pub-links"><a href="papers/BIR.pdf">PDF</a> · <a href="https://doi.org/10.1016/j.bir.2023.11.003">DOI</a></span>
-            </li>
-            <li>
-              <strong>ESG Performance and Bank stability: The Role of National Culture and Formal Institutions. </strong> <em>Research in International Business and Finance<em>, 2026.
-              <span class="pub-links"><a href="papers/RIBAF2.pdf">PDF</a> · <a href="https://doi.org/10.1016/j.ribaf.2025.103214">DOI</a></span>
-            </li>
+        <h2>Selected Publications</h2>
+        <div class="pubs-grid">
+          
+          <article class="pub-card">
+            <div class="pub-content">
+              <div class="pub-tags"><span class="tag">Strategy</span><span class="tag">Asia</span></div>
+              <h3 class="pub-title">The ESG emissions paradox: Capability-contingent effects of research and development</h3>
+              <p class="pub-journal">Business Strategy and the Environment, 2026</p>
+              <div class="pub-actions">
+                <a href="papers/bse.pdf" class="btn-sm"><i class="fas fa-file-pdf"></i> PDF</a>
+                <a href="https://doi.org/10.1002/bse.70362" class="btn-sm outline">DOI</a>
+              </div>
+            </div>
+          </article>
 
-            <li>
-              <strong>Short-term costs and long-term gains of ESG initiatives in high-risk environments: Evidence from UK firms. </strong> <em>Development and Sustainability in Economics and Finance<em>, 2025.
-              <span class="pub-links"><a href="papers/DSEF.pdf">PDF</a> · <a href="https://doi.org/10.1016/j.dsef.2025.100075">DOI</a></span>
-            </li>
+          <article class="pub-card">
+            <div class="pub-content">
+              <div class="pub-tags"><span class="tag">Climate Risk</span><span class="tag">Corporate Value</span></div>
+              <h3 class="pub-title">When climate risk hits corporate value: The moderating role of financial constraints</h3>
+              <p class="pub-journal">Finance Research Letters, 2025</p>
+              <div class="pub-actions">
+                <a href="papers/FRL.pdf" class="btn-sm"><i class="fas fa-file-pdf"></i> PDF</a>
+                <a href="https://doi.org/10.1016/j.frl.2025.106780" class="btn-sm outline">DOI</a>
+              </div>
+            </div>
+          </article>
 
-            <li>
-              <strong>Financial Pathways to Sustainability: The Effects of Financial Inclusion, Development, and Innovation on Shaping ESG Readiness in Low-and Middle-Income Countries. </strong> <em>International Journal of Financial Studies<em>, 2025.
-              <span class="pub-links"><a href="papers/IJFS.pdf">PDF</a> · <a href="https://doi.org/10.3390/ijfs13030122">DOI</a></span>
-            </li>
-
-            <li>
-              <strong>Does financial flexibility drive firm's risk‐taking in emerging markets? The moderating role of investment efficiency. </strong> <em>Managerial and Decision Economics<em>, 2024.
-              <span class="pub-links"><a href="papers/MDE.pdf">PDF</a> · <a href="https://doi.org/10.1002/mde.4337">DOI</a></span>
-            </li>
-
-            <li>
-              <strong>ESG trade-off with risk and return in Chinese energy companies.</strong> <em> International Journal of Energy Sector Management<em>, 2024.
-              <span class="pub-links"><a href="papers/IJESM.pdf">PDF</a> · <a href="https://doi.org/10.1108/IJESM-07-2023-0027">DOI</a></span>
-            </li>
-
-            <li>
-              <strong>Unlocking the effect of corporate environmental practices in driving firms’ financial performance. </strong> <em>Environmental Economics and Policy Studies<em>, 2023.
-              <span class="pub-links"><a href="papers/EEPS.pdf">PDF</a> · <a href="https://doi.org/10.1007/s10018-023-00385-x">DOI</a></span>
-            </li>
-
-            <li>
-              <strong>Firm’s Climate Change Risk and Firm Value: An Empirical Analysis of the Energy Industry. </strong> <em>Financial Markets, Institutions and Risks<em>, 2023.
-              <span class="pub-links"><a href="papers/FMIR.pdf">PDF</a> · <a href="https://doi.org/10.21272/fmir.7(2).1-11.2023">DOI</a></span>
-            </li>
-
-            <li>
-              <strong>Stock Performance, Sector’s Nature and Macroeconomic Environment. </strong> <em>Financial Markets, Institutions and Risks<em>, 2022.
-              <span class="pub-links"><a href="papers/FMIR2.pdf">PDF</a> · <a href="https://doi.org/10.21272/fmir.6(1).13-26.2021">DOI</a></span>
-            </li>
-
-            <li>
-              <strong>Firm, Industry and Macroeconomics Dynamics of Stock Returns: A Case of Pakistan Non-Financial Sector. </strong> <em>Journal of Risk and Financial Management<em>, 2021.
-              <span class="pub-links"><a href="papers/JRFM.pdf">PDF</a> · <a href="https://doi.org/10.3390/jrfm14050190">DOI</a></span>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="section">
-      <div class="container">
-        <h2>Education</h2>
-        <div class="grid-2">
-          <div class="card">
-            <h3>PhD Business Studies</h3>
-            <ul class="bullets">
-              <li>2022-2026</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>MS Mgt. Sciences</h3>
-            <ul class="bullets">
-              <li>2015-2017</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>B.Com Hons</h3>
-            <ul class="bullets">
-              <li>2010-2015</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section id="experience" class="section alt">
-      <div class="container">
-        <h2>Experience</h2>
-        <div class="grid-2">
-          <div class="card">
-            <h3>Finance Officer</h3>
-            <ul class="bullets">
-              <li>Citizens Advice Darlington</li>
-              <li>2022-Current</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Assistant Manager Finance </h3>
-            <ul class="bullets">
-              <li>Mirpur Medical Services Pvt Ltd.</li>
-              <li>2021-2022</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Accounts Officer </h3>
-            <ul class="bullets">
-              <li>Daelim Industrial Co. Ltd.</li>
-              <li>2018-2018</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <div class="card contact-box">
-          <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mirzamnaseer@gmail.com">mirzamnaseer@gmail.com</a></p>
-          <p><i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="#">mmnaseer</a></p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container">
-        <p>© <span id="year"></span> Mirza Muhammad Naseer</p>
-      </div>
-    </footer>
-  </main>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-    const toggle = document.getElementById('theme-toggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('light-theme');
-      localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
-    });
-    if (localStorage.getItem('theme') === 'light') document.body.classList.add('light-theme');
-  </script>
-</body>
-</html>
+          <article class="pub-card">
+            <div class="pub-content">
+              <div class="pub-tags"><span class="tag">Global</span><span class="tag">Volatility</span></div>
