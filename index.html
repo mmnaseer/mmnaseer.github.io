@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirza M Naseer - Climate Finance & ESG Research</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #10b981;
+            --primary-dark: #059669;
+            --secondary: #0f766e;
+            --accent: #f59e0b;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+            --text-muted: #999999;
+            --bg-light: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --border: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        body.dark-mode {
+            --text-dark: #f5f5f5;
+            --text-light: #b0b0b0;
+            --text-muted: #808080;
+            --bg-light: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --border: #333333;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 0.8rem 0;
+        }
+
+        body.dark-mode nav {
+            background: rgba(10,10,10,0.95);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--text-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -6px;
+            left: 0;
+            background: var(--primary);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            padding: 5rem 2rem;
+            margin-bottom: 0;
+        }
+
+        body.dark-mode .hero {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        }
+
+        .hero .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border-radius: 6px;
+            border: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-dark);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            padding: 2rem;
+            background: rgba(16,185,129,0.1);
+            border-radius: 12px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Citation Links */
+        .citation-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .citation-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .citation-badge:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(16,185,129,0.05);
+        }
+
+        .citation-badge i {
+            font-size: 1rem;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            padding: 0 1rem;
+        }
+
+        /* Publication Types */
+        .publication-controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            border: 2px solid var(--border);
+            background: transparent;
+            color: var(--text-dark);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Publication Grid */
+        .publication-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+            gap: 1.5rem;
+            padding: 0 1rem;
+        }
+
+        .publication-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.8rem;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .publication-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .pub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .pub-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .pub-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(16,185,129,0.2);
+            color: var(--primary);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .pub-type-badge {
+            padding: 0.3rem 0.8rem;
+            background: rgba(15,118,110,0.2);
+            color: var(--secondary);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .pub-type-badge.working {
+            background: rgba(245,158,11,0.2);
+            color: var(--accent);
+        }
+
+        .pub-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            line-height: 1.5;
+            margin: 0.5rem 0;
+        }
+
+        .pub-authors {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin: 0.5rem 0;
+        }
+
+        .pub-journal {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .pub-abstract {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin: 1rem 0;
+            padding: 0.8rem;
+            background: rgba(0,0,0,0.02);
+            border-left: 3px solid var(--primary);
+            border-radius: 4px;
+        }
+
+        body.dark-mode .pub-abstract {
+            background: rgba(255,255,255,0.02);
+        }
+
+        .pub-citations {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            padding: 0.8rem;
+            background: rgba(16,185,129,0.05);
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+
+        .citations-count {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .pub-links {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .pub-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .pub-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            padding: 2rem;
+        }
+
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .research-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .research-tag {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: rgba(16,185,129,0.1);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .about-sidebar {
+            background: var(--bg-secondary);
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .sidebar-item {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .sidebar-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .sidebar-list li {
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .sidebar-list li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-dark);
+            color: #999;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .publication-grid {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            section h2 {
+                font-size: 1.6rem;
+            }
+
+            .publication-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .publication-controls {
+                padding: 0;
+            }
+
+            .filter-btn {
+                flex: 1;
+                min-width: 100px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .publication-card {
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Mirza Naseer</div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#working-papers" class="nav-link">Working Papers</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Climate Finance & ESG Research</h1>
+                <p>Early career researcher, focused on how corporate climate risk, ESG disclosure, and governance shape financial markets. 
+                    20+ peer-reviewed publications including papers in ABS 3-rated journals with 700+ citations.</p>
+                <div class="cta-buttons">
+                    <a href="#publications" class="btn btn-primary">View Publications</a>
+                    <a href="https://scholar.google.com/citations?user=SM0wvw0AAAAJ&hl=en" class="btn btn-secondary" target="_blank">Google Scholar</a>
+                </div>
+                <div class="citation-links">
+                    <a href="https://scholar.google.com/citations?user=SM0wvw0AAAAJ&hl=en" class="citation-badge" target="_blank">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Google Scholar</span>
+                    </a>
+                    <a href="https://www.scopus.com/authid/detail.uri?authorId=36057232400" class="citation-badge" target="_blank">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Scopus Profile</span>
+                    </a>
+                    <a href="https://www.webofscience.com/wos/author/record/AAO-5866-2021" class="citation-badge" target="_blank">
+                        <i class="fas fa-book"></i>
+                        <span>Web of Science</span>
+                    </a>
+                    <a href="https://orcid.org/0000-0002-5740-1927" class="citation-badge" target="_blank">
+                        <i class="fas fa-id-card"></i>
+                        <span>ORCID: 0000-0002-5740-1927</span>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">700+</div>
+                        <div class="stat-label">Citations</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">ABS 3★</div>
+                        <div class="stat-label">Top-tier</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About My Research</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>I'm a early career researcher with nearly four years of teaching and research experience in UK higher education. My research sits at the intersection of corporate finance, sustainability, and ESG disclosure.</p>
+                    
+                    <p>My work examines how corporate climate risk affects stock market volatility, how ESG performance influences earnings quality, and the role of intangible liabilities in financial reporting. I'm particularly interested in understanding the mechanisms through which corporate governance shapes financial markets in times of climate transition.</p>
+
+                    <p>I actively engage in peer review for top-tier journals and collaborate with researchers across Europe. My publications appear in ABS 3-rated outlets including Business Strategy and the Environment and International Review of Financial Analysis.</p>
+
+                    <div class="research-tags">
+                        <span class="research-tag">Corporate Governance</span>
+                        <span class="research-tag">Climate Risk</span>
+                        <span class="research-tag">ESG Performance</span>
+                        <span class="research-tag">Financial Reporting</span>
+                        <span class="research-tag">Sustainability Finance</span>
+                        <span class="research-tag">Earnings Management</span>
+                    </div>
+                </div>
+                <div class="about-sidebar">
+                    <div class="sidebar-item">
+                        <div class="sidebar-title">📚 Education</div>
+                        <ul class="sidebar-list">
+                            <li>PhD in Finance, Teesside University (UK)</li>
+                            <li>MSc Finance, Riphah International University</li>
+                            <li>B.Com Honours, University of Azad Jammu & Kashmir</li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-title">🔬 Research Interests</div>
+                        <ul class="sidebar-list">
+                            <li>Corporate Climate Risk</li>
+                            <li>ESG & Sustainability</li>
+                            <li>Financial Markets</li>
+                            <li>Accounting Quality</li>
+                            <li>AI in Finance</li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-title">🌐 Active Profiles</div>
+                        <ul class="sidebar-list">
+                            <li><a href="https://scholar.google.com/citations?user=SM0wvw0AAAAJ&hl=en" style="color: var(--primary);" target="_blank">Google Scholar</a></li>
+                            <li><a href="https://www.researchgate.net/profile/Mirza-Muhammad-Naseer" style="color: var(--primary);" target="_blank">ResearchGate</a></li>
+                            <li><a href="https://linkedin.com/in/mirzamnaseer" style="color: var(--primary);" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://orcid.org/0000-0002-5740-1927" style="color: var(--primary);" target="_blank">ORCID</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <h2>Peer-Reviewed Publications</h2>
+            <div class="publication-controls">
+                <button class="filter-btn active" onclick="filterPublications('all')">All (20+)</button>
+                <button class="filter-btn" onclick="filterPublications('abs3')">ABS 3★</button>
+                <button class="filter-btn" onclick="filterPublications('abs2')">ABS 2★</button>
+                <button class="filter-btn" onclick="filterPublications('other')">Other</button>
+            </div>
+
+            <div class="publication-grid" id="publicationGrid">
+                <!-- Publication 1 -->
+                <div class="publication-card" data-category="abs3">
+                    <div class="pub-header">
+                        <div style="flex: 1;">
+                            <div class="pub-badges">
+                                <span class="pub-badge">ABS 3★</span>
+                                <span class="pub-badge">2024</span>
+                            </div>
+                            <h3 class="pub-title">Sustainable investments in volatile times: Nexus of climate change risk, ESG practices, and market volatility</h3>
+                            <p class="pub-authors">M M Naseer, Y Guo, T Bagh, X Zhu</p>
+                            <p class="pub-journal">International Review of Financial Analysis, 2024</p>
+                        </div>
+                    </div>
+                    <p class="pub-abstract">How does climate risk impact financial market volatility? A quantitative study examining the nexus of climate change, ESG practices, and stock market volatility in UK listed firms using panel data models.</p>
+                    <div class="pub-citations">
+                        <div class="citations-count">
+                            <i class="fas fa-quote-right"></i>
+                            <span id="citations-1">96</span> citations
+                        </div>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.irfa.2024.103492" class="pub-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Publisher
+                        </a>
+                        <a href="./papers/IRFA.pdf" class="pub-link">
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </a>
+                        <a href="./papers/replication/sustainable-investments-climate-risk/" class="pub-link">
+                            <i class="fas fa-code"></i> Code & Data
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Publication 2 -->
+                <div class="publication-card" data-category="abs3">
+                    <div class="pub-header">
+                        <div style="flex: 1;">
+                            <div class="pub-badges">
+                                <span class="pub-badge">ABS 3★</span>
+                                <span class="pub-badge">2026</span>
+                            </div>
+                            <h3 class="pub-title">The ESG Emissions Paradox: Capability-Contingent Effects of R&D and Cost Leadership in Asia</h3>
+                            <p class="pub-authors">M M Naseer, N Hussain, S A Khan, Gi Nicolo</p>
+                            <p class="pub-journal">Business Strategy and the Environment, 2026</p>
+                        </div>
+                    </div>
+                    <p class="pub-abstract">Examines why higher-emitting firms bolster ESG ratings through transparency and governance rather than emissions reductions. Uses capability-contingency theory to explain ESG paradoxes in Asian markets.</p>
+                    <div class="pub-citations">
+                        <div class="citations-count">
+                            <i class="fas fa-quote-right"></i>
+                            <span id="citations-2">5</span> citations
+                        </div>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1002/bse.70362" class="pub-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Publisher
+                        </a>
+                        <a href="./papers/bse.pdf" class="pub-link">
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </a>
+                        <a href="./papers/R_BSE.zip/" class="pub-link">
+                            <i class="fas fa-code"></i> Code & Data
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Publication 3 -->
+                <div class="publication-card" data-category="abs2">
+                    <div class="pub-header">
+                        <div style="flex: 1;">
+                            <div class="pub-badges">
+                                <span class="pub-badge">ABS 2★</span>
+                                <span class="pub-badge">2025</span>
+                            </div>
+                            <h3 class="pub-title">When climate risk hits corporate value: The moderating role of financial constraints, flexibility, and innovation</h3>
+                            <p class="pub-authors">M M Naseer, Y Guo, X Zhu</p>
+                            <p class="pub-journal">Finance Research Letters, 2025</p>
+                        </div>
+                    </div>
+                    <p class="pub-abstract">Documents significant negative relationship between climate risk and firm value with geographic variation. Asia faces highest risk, followed by Europe and North America. Innovation moderates this effect.</p>
+                    <div class="pub-citations">
+                        <div class="citations-count">
+                            <i class="fas fa-quote-right"></i>
+                            <span id="citations-3">33</span> citations
+                        </div>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.frl.2025.106780" class="pub-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Publisher
+                        </a>
+                        <a href="./papers/FRL.pdf" class="pub-link">
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </a>
+                        <a href="./papers/replication/climate-risk-corporate-value/" class="pub-link">
+                            <i class="fas fa-code"></i> Code & Data
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Additional Publications (You can add more here) -->
+                <div class="publication-card" data-category="abs2">
+                    <div class="pub-header">
+                        <div style="flex: 1;">
+                            <div class="pub-badges">
+                                <span class="pub-badge">ABS 2★</span>
+                                <span class="pub-badge">2025</span>
+                            </div>
+                            <h3 class="pub-title">The dynamics of corporate climate risk and market volatility: International evidence</h3>
+                            <p class="pub-authors">M M Naseer, Y Guo, X Zhu</p>
+                            <p class="pub-journal">The North American Journal of Economics and Finance, 2025</p>
+                        </div>
+                    </div>
+                    <p class="pub-abstract"> Investigates the impact of firm climate risk exposure on market volatility, with a particular focus on the moderating roles of firm-specific and country-level characteristics.
+                         Comprehensive global panel of 38,808 firm-year observations across 54 countries.</p>
+                    <div class="pub-citations">
+                        <div class="citations-count">
+                            <i class="fas fa-quote-right"></i>
+                            <span id="citations-4">5</span> citations
+                        </div>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://doi.org/10.1016/j.najef.2025.102435" class="pub-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Publisher
+                        </a>
+                        <a href="./papers/NAJEF.pdf" class="pub-link">
+                            <i class="fas fa-file-pdf"></i> PDF
+                        </a>
+                        <a href="./papers/replication/corporate-culture-earnings-mgmt/" class="pub-link">
+                            <i class="fas fa-code"></i> Code & Data
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Add 16+ more publications as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Papers Section -->
+    <section id="working-papers" style="background: rgba(245,158,11,0.02);">
+        <div class="container">
+            <h2>Working Papers & Under Review</h2>
+            <div class="publication-grid">
+                <!-- Working Paper 1 -->
+                <div class="publication-card">
+                    <div class="pub-header">
+                        <div style="flex: 1;">
+                            <div class="pub-badges">
+                                <span class="pub-type-badge working">Under Review</span>
+                                <span class="pub-badge">2026</span>
+                            </div>
+                            <h3 class="pub-title">Substitution Effect: How CSR and Strong Institutions Redirect Managerial Opportunism</h3>
+                            <p class="pub-authors">M M Naseer, Y Guo</p>
+                            <p class="pub-journal">Submitted to Journal of Business Ethics, 2026</p>
+                        </div>
+                    </div>
+                    <p class="pub-abstract">Does Corporate Social Responsibility (CSR) improve financial reporting quality, or does it merely shift the locus of managerial opportunism? 
+                        We investigate this ethical paradox using an extensive global dataset of 67,244 firm-year observations spanning 65 countries from 2002 to 2024.
+                        We document a significant and robust substitution effect: while high-CSR firms engage in less accrual-based earnings management, 
+                        they compensate by increasing operational manipulations of real earnings, such as cutting R&D or overproducing inventory.</p>
+                    <div class="pub-citations">
+                        <div class="citations-count">
+                            <i class="fas fa-clock"></i>
+                            <span>Under Review</span>
+                        </div>
+                    </div>
+                    <div class="pub-links">
+                        <a href="./papers/pdf/ai-climate-risk-pricing-wp.pdf" class="pub-link">
+                            <i class="fas fa-file-pdf"></i> Working Paper
+                        </a>
+                        <a href="./papers/replication/ai-climate-risk/" class="pub-link">
+                            <i class="fas fa-code"></i> Code & Data
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Working Paper 2 -->
+                <div class="publication-card">
+                    <div class="pub-header">
+                        <div style="flex: 1;">
+                            <div class="pub-badges">
+                                <span class="pub-type-badge working">Working Paper</span>
+                                <span class="pub-badge">2026</span>
+                            </div>
+                            <h3 class="pub-title">Deep Uncertainty and the Real-Option Channel of Climate Risk</h3>
+                            <p class="pub-authors">M M Naseer, I Azam, Y Guo</p>
+                            <p class="pub-journal">Submitted to International Journal of Finance & Economics, 2026</p>
+                        </div>
+                    </div>
+                    <p class="pub-abstract">Examines how firm-level climate attention affects corporate valuation and financial risk under conditions of systemic deep uncertainty. 
+                        Using a large international panel of publicly listed firms, we show that heightened climate attention is associated with significant declines in firm value and pronounced changes in stock return volatility.</p>
+                    <div class="pub-citations">
+                        <div class="citations-count">
+                            <i class="fas fa-clock"></i>
+                            <span>In Preparation</span>
+                        </div>
+                    </div>
+                    <div class="pub-links">
+                        <a href="./papers/pdf/sustainable-finance-pakistan-wp.pdf" class="pub-link">
+                            <i class="fas fa-file-pdf"></i> Working Paper
+                        </a>
+                        <a href="./papers/replication/sustainable-finance-pakistan/" class="pub-link">
+                            <i class="fas fa-code"></i> Code & Data
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem;">I'm always interested in collaborating on research, discussing academic opportunities, or exploring partnerships in climate finance and sustainable business.</p>
+                <div class="citation-links" style="justify-content: center;">
+                    <a href="mailto:mirzamnaseer@gmail.com" class="citation-badge">
+                        <i class="fas fa-envelope"></i> Email
+                    </a>
+                    <a href="https://linkedin.com/in/mirzamnaseer" class="citation-badge" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=SM0wvw0AAAAJ&hl=en" class="citation-badge" target="_blank">
+                        <i class="fas fa-graduation-cap"></i> Google Scholar
+                    </a>
+                    <a href="https://orcid.org/0000-0002-5740-1927" class="citation-badge" target="_blank">
+                        <i class="fas fa-id-card"></i> ORCID
+                    </a>
+                    <a href="https://researchgate.net/profile/Mirza-Muhammad-Naseer" class="citation-badge" target="_blank">
+                        <i class="fas fa-users"></i> ResearchGate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Mirza Muhammad Naseer. All rights reserved.</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">Research Portfolio | Climate Finance & ESG | </a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        }
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('dark-mode');
+        }
+
+        // Publication Filtering
+        function filterPublications(category) {
+            const cards = document.querySelectorAll('.publication-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            cards.forEach(card => {
+                if (category === 'all') {
+                    card.classList.remove('hidden');
+                } else if (card.getAttribute('data-category') === category) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Active Navigation Link
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Live Citation Updates (Example - you can connect to actual APIs)
+        // This function can be called to fetch live citation data
+        function updateCitationCounts() {
+            // Example: You can integrate with:
+            // - Google Scholar API (via CORS proxy)
+            // - Semantic Scholar API
+            // - CrossRef API
+            // - ResearchGate API
+            
+            // Placeholder - replace with actual API calls
+            const citations = {
+                1: 28,
+                2: 18,
+                3: 15,
+                4: 32
+            };
+            
+            Object.entries(citations).forEach(([id, count]) => {
+                const element = document.getElementById(`citations-${id}`);
+                if (element) {
+                    element.textContent = count;
+                }
+            });
+        }
+
+        // Call on page load
+        updateCitationCounts();
+    </script>
+</body>
+</html>
